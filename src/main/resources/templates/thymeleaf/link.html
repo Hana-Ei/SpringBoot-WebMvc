@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link</title>
+</head>
+<body>
+    <h1>윙크</h1>
+    <ul>
+        <li><span th:text="${param1}">data</span></li>
+        <li><span th:text="${param2}">data</span></li>
+        <li><a th:href="@{/hello}">link</a></li>
+        <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">link</a></li>
+        <li><a th:href="@{/hello/{path1}(path1=${param1})}">link</a></li>
+        <li><a th:href="@{/hello/{path1}/{path2}(path1=${param1}, path2=${param2})}">link</a></li>
+        <li><a th:href="@{/hello/{path1}(path1=${param1}, param2=${param2})}">link</a></li>
+    </ul>
+</body>
+</html>

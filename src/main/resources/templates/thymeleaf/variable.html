@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TTTTTTTTTTTTTTTTTTTTitle</title>
+</head>
+<body>
+    <h1>Welcome to ThymeLeaf</h1>
+    <h2>변수를 EL로 표현하기</h2>
+<ul>
+    <li>${user1['name']} : <span th:text="${user1['name']}"></span></li>
+    <li>${user2.name} : <span th:text="${user2.name}"></span></li>
+    <li>${user2.getId()} : <span th:text="${user2.getId()}"></span></li>
+    <li>${users} : <span th:text="${users}"></span></li>
+    <li>${users[0].name} : <span th:text="${users[0].name}"></span></li>
+    <li>${users[1].get Name()} : <span th:text="${users[1].name}"></span></li>
+    <li>${userMap} : <span th:text="${userMap}"></span></li>
+    <li>${userMap['member1'].name} : <span th:text="${userMap['member1'].name}"></span></li>
+    <li>${userMap['member2']['name']} : <span th:text="${userMap['member2']['name']}"></span></li>
+    <li>${userMap['member2'].getName()} : <span th:text="${userMap['member2'].getName()}"></span></li>
+</ul>
+</body>
+</html>

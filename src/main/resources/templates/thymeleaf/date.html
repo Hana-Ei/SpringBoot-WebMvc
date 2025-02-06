@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic object</title>
+</head>
+<body>
+<!--    <h1>기본 객체</h1>-->
+    <h1>date객체</h1>
+    <ul>
+<!--        <li>-->
+<!--            request : <span th:text="${#request}">data</span>-->
+<!--            response : <span th:text="${#response}">data</span>-->
+<!--        </li>-->
+        <li>default: <span th:text = "${now}">data</span></li>
+        <li>format: <span th:text = "${#temporals.format(now, 'yyyy-MM-dd HH:mm:ss')}">data</span></li>
+    </ul>
+</body>
+</html>

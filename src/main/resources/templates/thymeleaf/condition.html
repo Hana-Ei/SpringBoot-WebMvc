@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition</title>
+</head>
+<body>
+    <h1>조건문 Page</h1>
+    <ul>
+        <li th:if="${member}">
+            <span th:text="${member.name}"></span>
+        </li>
+        <li th:unless="${member}">
+            <span>회원정보가 없습니다.</span>
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li th:each="member : ${list}">
+            이름 : <span th:text="${member.name}"></span>
+            이메일 : <span th:text="${member.email}"></span>
+            <span th:switch="${member.domain}">
+                <span th:case="'gmail'">@gmail.com</span>
+                <span th:case="'naver'">@naver.com</span>
+                <span th:case="'daum'">@daum.com</span>
+                <span th:case="*">도메인 없음</span>
+            </span>
+        </li>
+    </ul>
+</body>
+</html>

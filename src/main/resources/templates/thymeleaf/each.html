@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for(Each) html</title>
+</head>
+<body>
+    <h1>for(Each) html</h1>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>etc</th>
+        </tr>
+        <tr th:each="member, memberStat : ${list}">
+            <td th:text="${memberStat.count}"></td>
+            <td th:text="${member.id}"></td>
+            <td th:text="${member.name}"></td>
+            <td th:text="${member.email}"></td>
+            <td>
+                index : <span th:text="${memberStat.index}"></span>
+                count : <span th:text="${memberStat.count}"></span>
+                size : <span th:text="${memberStat.size}"></span>
+                even : <span th:text="${memberStat.even}"></span>
+                odd : <span th:text="${memberStat.odd}"></span>
+                first : <span th:text="${memberStat.first}"></span>
+                last : <span th:text="${memberStat.last}"></span>
+                current : <span th:text="${memberStat.current}"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
